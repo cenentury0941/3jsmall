@@ -217,3 +217,41 @@ button {
   text-decoration: underline;
   color: inherit;
 }
+
+.SpeedrunTitleContainer {
+  display: flex;
+  position: absolute;
+  top: 35vh;
+  left: 30vw;
+  height: 30vh;
+  width: 40vw;
+  background-color: #1f0000;
+  border-radius: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.SpeedrunTitleText {
+  display: flex;
+  flex-direction: row;
+  font-weight: bolder;
+  font-size: 10vh;
+  margin: 0;
+}
+
+.SpeedrunAnimation {
+  animation-name: textAnim;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes textAnim {
+  0% {scale: 1.2; opacity: 0.5;}
+  3% {scale: 1.2; opacity: 0.5;}
+  10% {scale: 1; opacity: 1;}
+  100% {scale: 1; opacity: 1;}
+}

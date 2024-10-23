@@ -8,6 +8,7 @@ import audio from './assets/music.mp3';
 import PointerText from "./PointerText"
 import Cart from "./Cart"
 import Timer from "./Timer"
+import SpeedrunTitle from "./SpeedrunTitle"
 
 function Overlay() {
   const [ready, set] = useState(false)
@@ -79,6 +80,9 @@ function Overlay() {
       <PointerText text={pointerText}/>
       <Cart gameState={gameState} targetCart={targetCart} currentCart={currentCart}/>
       <Timer curTime={runningTime}/>
+      {
+       gameState == "STARTING_SPEEDRUN" && <SpeedrunTitle/>
+      }
       <div className="dot" />
       <div className={`fullscreen bg ${(loaded == 100) ? "ready" : "notready"} ${ready && "clicked"}`}>
         <div className="stack">
